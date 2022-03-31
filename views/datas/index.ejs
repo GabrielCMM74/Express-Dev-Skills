@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+
+    <h1>DATA SHEET</h1>
+
+    <a href="/datas/new">Create Car</a>
+
+    <ul>
+        <% datas.forEach(i => { %>
+            
+          <a href="/datas/<%= i.id %>">
+            Click for Details for Car <%=datas.id%>
+        </a>
+            <li>
+             Car: <%= i.Car %> -- Model <%= i.Muscle ? 'Muscle' : 'JDM' %> 
+            
+            </li>
+        <% }) %>
+
+        
+
+        
+    </ul> 
+    
+  </body>
+</html>
